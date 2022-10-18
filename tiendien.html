@@ -8,14 +8,14 @@
 </head>
 <body>
     <script>
-        let kWh= Number(prompt('Nhập số kWh nhà bạn đã dùng :'));
+        let kWh= parseInt(prompt('Nhập số kWh nhà bạn đã dùng :'));
         kWh <0 ? alert('error'): 
-        kWh <=50? alert(`số tiền phải trả :${kWh*1678} vnđ`):
-        kWh <=100? alert(`số tiền phải trả :${kWh*1734} vnđ`):
-        kWh <=200? alert(`số tiền phải trả :${kWh*2014} vnđ`):
-        kWh <=300? alert(`số tiền phải trả :${kWh*2536} vnđ`):
-        kWh <=400? alert(`số tiền phải trả :${kWh*2834} vnđ`):
-                   alert(`số tiền phải trả :${kWh*2972} vnđ`);
+        kWh <=50? alert(`số tiền phải trả :${(kWh*1678*(1+0.1))} vnđ`):
+        kWh <=100? alert(`số tiền phải trả :${((50*1678 + (kWh-50)*1734)*(1+0.1)).toFixed(0)} vnđ`):
+        kWh <=200? alert(`số tiền phải trả :${((50*1678 + 50*1734 + (kWh-100)*2014)*(1+0.1)).toFixed(0)} vnđ`):
+        kWh <=300? alert(`số tiền phải trả :${((50*1678 + 50*1734 + 100*2014+ (kWh-200)*2536)*(1+0.1)).toFixed(0)} vnđ`):
+        kWh <=400? alert(`số tiền phải trả :${((50*1678 + 50*1734 + 100*2014+ 100*2536 +(kWh-300)*2834)*(1+0.1)).toFixed(0)} vnđ`):
+                   alert(`số tiền phải trả :${((50*1678 + 50*1734 + 100*2014+ 100*2536 +100*2834+ (kWh-400)*2972)*(1+0.1)).toFixed(0)} vnđ`);
     </script>
 </body>
 </html>
